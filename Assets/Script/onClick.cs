@@ -38,6 +38,7 @@ public class onClick : MonoBehaviour
     {
         for (int i = 0; i < antal; i++) {
             Instantiate(TestCube, new Vector3(3, 5, 0), Quaternion.identity);
+
         }
     }
 
@@ -48,7 +49,8 @@ public class onClick : MonoBehaviour
         GetComponent<AudioSource>().Play();
         for (int i = 0; i < 100; i++)
         {
-            Instantiate(TestCube, new Vector3(3, 5, 0), Quaternion.identity);
+           GameObject clone = Instantiate(TestCube, new Vector3(3, 5, 0), Quaternion.identity);
+            Destroy(clone, 5);
         }
     }
 }
