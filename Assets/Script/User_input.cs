@@ -52,8 +52,9 @@ public class User_input : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+        float jump = Input.GetAxis("Jump");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 movement = new Vector3(moveHorizontal, jump, moveVertical);
 
         rb.AddForce(movement * speed);
     }

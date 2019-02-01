@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class onClick : MonoBehaviour
 {
@@ -52,5 +53,11 @@ public class onClick : MonoBehaviour
            GameObject clone = Instantiate(TestCube, new Vector3(3, 5, 0), Quaternion.identity);
             Destroy(clone, 5);
         }
+
+       
+    }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(1);
     }
 }
