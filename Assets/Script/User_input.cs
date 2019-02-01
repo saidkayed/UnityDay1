@@ -57,6 +57,12 @@ public class User_input : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, jump, moveVertical);
 
         rb.AddForce(movement * speed);
+
+        if (this.gameObject.transform.position.y < 0)
+        {
+            print("DU er faldet");
+            this.gameObject.transform.position = new Vector3(3,1,5);
+        }
     }
 }
     
